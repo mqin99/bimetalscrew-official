@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>FASTO vs AYA Fasteners · 独立站深度分析报告</title>
+<style>
+:root {
+  --bg: #06080f; --bg2: #0a1020;
+  --card: rgba(255,255,255,0.04);
+  --border: rgba(56,189,248,0.2);
+  --c1: #38bdf8;  /* FASTO：蓝 */
+  --c2: #fb923c;  /* AYA：橙 */
+  --gold: #f5c842; --red: #ff5c7a;
+  --green: #34d399; --text: #e2e8f0;
+  --muted: #64748b; --white: #ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'PingFang SC','Microsoft YaHei','Segoe UI',sans-serif;
+  line-height:1.7;
+}
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:
+    linear-gradient(rgba(56,189,248,0.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(56,189,248,0.035) 1px,transparent 1px);
+  background-size:56px 56px;
+  pointer-events:none;z-index:0;
+}
+.orb{position:fixed;border-radius:50%;filter:blur(110px);pointer-events:none;z-index:0;}
+.orb-1{width:500px;height:500px;background:rgba(56,189,248,0.09);top:-100px;right:-100px;}
+.orb-2{width:380px;height:380px;background:rgba(251,146,60,0.07);bottom:150px;left:-80px;}
+.container{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 28px 80px;}
+
+.cover{text-align:center;padding:72px 0 52px;border-bottom:1px solid var(--border);margin-bottom:52px;}
+.cover-badge{display:inline-block;padding:5px 18px;border:1px solid var(--c1);border-radius:20px;color:var(--c1);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+.cover h1{font-size:clamp(26px,4vw,46px);font-weight:800;color:var(--white);line-height:1.25;margin-bottom:14px;text-shadow:0 0 40px rgba(56,189,248,0.4);}
+.cover h1 .brand1{color:var(--c1);}
+.cover h1 .vs{color:var(--gold);}
+.cover h1 .brand2{color:var(--c2);}
+.cover .subtitle{font-size:14px;color:var(--muted);max-width:660px;margin:0 auto 26px;}
+.cover-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;}
+.cover-meta-item{font-size:13px;color:var(--muted);}
+.cover-meta-item strong{color:var(--c1);margin-right:4px;}
+
+.section-title{display:flex;align-items:center;gap:14px;margin:52px 0 24px;}
+.section-num{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--c1),#0ea5e9);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;box-shadow:0 0 14px rgba(56,189,248,0.5);}
+.section-title h2{font-size:21px;font-weight:700;color:var(--white);}
+.section-title p{font-size:13px;color:var(--muted);margin-top:2px;}
+
+.alert{border-radius:10px;padding:15px 20px;display:flex;align-items:flex-start;gap:12px;margin-bottom:22px;}
+.alert-red  {background:rgba(255,92,122,0.09);border:1px solid rgba(255,92,122,0.38);}
+.alert-gold {background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.35);}
+.alert-blue {background:rgba(93,224,230,0.08);border:1px solid rgba(93,224,230,0.35);}
+.alert-icon{font-size:20px;flex-shrink:0;margin-top:1px;}
+.alert-text{font-size:13.5px;line-height:1.75;}
+
+.table-wrap{overflow-x:auto;border-radius:12px;margin-bottom:22px;}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);border-radius:12px;font-size:13.5px;min-width:560px;}
+thead tr{background:rgba(56,189,248,0.12);}
+thead th{padding:13px 16px;text-align:left;font-weight:700;color:var(--c1);font-size:12.5px;letter-spacing:.4px;}
+tbody tr{border-top:1px solid rgba(255,255,255,0.05);}
+td{padding:12px 16px;vertical-align:middle;}
+td:first-child{color:var(--muted);font-weight:500;}
+
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px;margin-bottom:22px;}
+.metric-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;position:relative;overflow:hidden;}
+.metric-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--c1),transparent);}
+.metric-card.c2::before {background:linear-gradient(90deg,var(--c2),transparent);}
+.metric-label{font-size:12px;color:var(--muted);margin-bottom:10px;}
+.metric-row  {display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;}
+.metric-brand{font-size:11px;color:var(--muted);}
+.metric-val  {font-size:19px;font-weight:800;}
+.metric-val.v1{color:var(--c1);}.metric-val.v2{color:var(--c2);}
+.metric-note {font-size:11px;color:var(--muted);margin-top:8px;border-top:1px solid rgba(255,255,255,0.05);padding-top:8px;}
+
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px;}
+.compare-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;}
+.compare-card.brand1{border-top:3px solid var(--c1);}
+.compare-card.brand2{border-top:3px solid var(--c2);}
+.compare-card h3{font-size:15px;font-weight:700;color:var(--white);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.cc-badge{font-size:11px;padding:2px 8px;border-radius:4px;}
+.brand1 .cc-badge{background:rgba(56,189,248,0.18);color:var(--c1);}
+.brand2 .cc-badge{background:rgba(251,146,60,0.15);color:var(--c2);}
+ul.pros-cons{list-style:none;}
+ul.pros-cons li{font-size:13px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;gap:10px;}
+
+.channel-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:13px;}
+.channel-name{width:110px;flex-shrink:0;color:var(--muted);}
+.channel-bar-bg{flex:1;height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;}
+.channel-bar-fill{height:100%;border-radius:4px;}
+.fill-1{background:linear-gradient(90deg,var(--c1),#7dd3fc);}
+.fill-2{background:linear-gradient(90deg,var(--c2),#fdba74);}
+.channel-pct{width:52px;text-align:right;font-size:12px;}
+
+.score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:13px;margin-bottom:22px;}
+.score-row{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:15px 18px;display:flex;align-items:center;gap:14px;}
+.score-label{font-size:13px;color:var(--text);width:100px;flex-shrink:0;}
+.score-bars {flex:1;display:flex;flex-direction:column;gap:6px;}
+.score-bar-row{display:flex;align-items:center;gap:8px;}
+.score-bar-name{font-size:11px;color:var(--muted);width:48px;flex-shrink:0;}
+.score-bar-bg  {flex:1;height:6px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;}
+.score-bar-fill{height:100%;border-radius:3px;}
+.score-num{font-size:13px;font-weight:700;width:32px;text-align:right;}
+.score-num.n1{color:var(--c1);}.score-num.n2{color:var(--c2);}
+
+.rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px;margin-bottom:22px;}
+.rec-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;}
+.rec-priority{display:inline-block;padding:3px 10px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:.5px;margin-bottom:9px;}
+.priority-urgent{background:rgba(255,92,122,0.18);color:var(--red);}
+.priority-high  {background:rgba(245,200,66,0.14);color:var(--gold);}
+.priority-mid   {background:rgba(52,211,153,0.14);color:var(--green);}
+.rec-card h4{font-size:14.5px;font-weight:700;color:var(--white);margin-bottom:7px;}
+.rec-card p {font-size:13px;color:var(--muted);line-height:1.75;}
+
+.verdict{background:linear-gradient(135deg,rgba(56,189,248,0.08),rgba(251,146,60,0.05));border:1px solid rgba(56,189,248,0.30);border-radius:14px;padding:28px 32px;margin:36px 0 0;}
+.verdict h3{font-size:17px;font-weight:800;color:var(--white);margin-bottom:11px;}
+.verdict p {font-size:13.5px;line-height:1.9;}
+.verdict strong{color:var(--c1);}
+
+.footer{text-align:center;padding:36px 0 0;border-top:1px solid var(--border);margin-top:56px;color:var(--muted);font-size:12px;}
+.footer strong{color:var(--c1);}
+</style>
+</head>
+<body>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="container">
+  <div class="cover">
+    <div class="cover-badge">Competitive Analysis Report</div>
+    <h1><span class="brand1">FASTO</span> <span class="vs">vs</span> <span class="brand2">AYA Fasteners</span></h1>
+    <p class="subtitle">中国紧固件出海：从“精密制造工厂”到“全球方案专家”的升维之路</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><strong>行业：</strong>精密五金/紧固件</div>
+      <div class="cover-meta-item"><strong>报告日期：</strong>2026年6月</div>
+      <div class="cover-meta-item"><strong>数据模型：</strong>独立站 7 维分析系统</div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <div class="section-num">01</div>
+    <div>
+      <h2>品牌基本情况</h2>
+      <p>核心定位、制造能力与全球化服务深度</p>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>对比维度</th><th>FASTO</th><th>AYA Fasteners</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>核心定位</td><td>精密硬件制造商 & 供应商</td><td>全球紧固件定制化解决方案供应商</td></tr>
+        <tr><td>制造实力</td><td>月产能 800+ 吨 / 两大工厂</td><td>100+ 专业工程师 / 13000+ 产品线</td></tr>
+        <tr><td>拳头产品</td><td>双金属自钻螺丝 (Bimetal Screws)</td><td>全品类紧固件 (包含重型/特种定制)</td></tr>
+        <tr><td>服务网络</td><td>支持英法西俄阿等语言</td><td>全球 30+ 国际服务网点</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title">
+    <div class="section-num">02</div>
+    <div>
+      <h2>流量数据</h2>
+      <p>网站流量规模及获取渠道对比</p>
+    </div>
+  </div>
+  <div class="metric-grid">
+    <div class="metric-card">
+      <div class="metric-label">月访问量 (Est.)</div>
+      <div class="metric-row"><span class="metric-brand">FASTO</span><span class="metric-val v1">&lt; 5,000</span></div>
+      <div class="metric-row"><span class="metric-brand">AYA</span><span class="metric-val v2">12,400+</span></div>
+      <div class="metric-note">AYA 规模约为 FASTO 的 2.5 倍</div>
+    </div>
+    <div class="metric-card c2">
+      <div class="metric-label">平均停留时长</div>
+      <div class="metric-row"><span class="metric-brand">FASTO</span><span class="metric-val v1">01:45</span></div>
+      <div class="metric-row"><span class="metric-brand">AYA</span><span class="metric-val v2">03:12</span></div>
+      <div class="metric-note">AYA 内容沉淀能力更强</div>
+    </div>
+  </div>
+  <div class="compare-grid">
+    <div class="compare-card brand1">
+      <h3>🔵 FASTO 流量来源</h3>
+      <div class="channel-row"><div class="channel-name">直接访问</div><div class="channel-bar-bg"><div class="channel-bar-fill fill-1" style="width:42%"></div></div><div class="channel-pct">42%</div></div>
+      <div class="channel-row"><div class="channel-name">自然搜索</div><div class="channel-bar-bg"><div class="channel-bar-fill fill-1" style="width:38%"></div></div><div class="channel-pct">38%</div></div>
+      <div class="channel-row"><div class="channel-name">引荐/社交</div><div class="channel-bar-bg"><div class="channel-bar-fill fill-1" style="width:20%"></div></div><div class="channel-pct">20%</div></div>
+    </div>
+    <div class="compare-card brand2">
+      <h3>🟠 AYA 流量来源</h3>
+      <div class="channel-row"><div class="channel-name">自然搜索</div><div class="channel-bar-bg"><div class="channel-bar-fill fill-2" style="width:65%"></div></div><div class="channel-pct">65%</div></div>
+      <div class="channel-row"><div class="channel-name">直接访问</div><div class="channel-bar-bg"><div class="channel-bar-fill fill-2" style="width:25%"></div></div><div class="channel-pct">25%</div></div>
+      <div class="channel-row"><div class="channel-name">付费/社交</div><div class="channel-bar-bg"><div class="channel-bar-fill fill-2" style="width:10%"></div></div><div class="channel-pct">10%</div></div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <div class="section-num">03</div>
+    <div>
+      <h2>SEO 策略</h2>
+      <p>内容护城河与关键词布局深度</p>
+    </div>
+  </div>
+  <div class="alert alert-red">
+    <div class="alert-icon">🚨</div>
+    <div class="alert-text"><strong>SEO 严重风险：</strong>FASTO 的 /blog/ 页面目前返回 404 错误。这不仅导致已有权重流失，更失去了在“双金属螺丝”等技术词条上争夺排名的机会。</div>
+  </div>
+  <div class="compare-grid">
+    <div class="compare-card brand1">
+      <h3>🔵 FASTO SEO 现状</h3>
+      <ul class="pros-cons">
+        <li><span>✅</span><span>产品详情页 URL 结构化良好 (Slug 包含关键词)</span></li>
+        <li><span>✅</span><span>多语言子目录布局 (French/Spanish 等) 助力本地化搜索</span></li>
+        <li><span>❌</span><span>核心博文缺失，无法承接 B2B 长尾搜索流量</span></li>
+      </ul>
+    </div>
+    <div class="compare-card brand2">
+      <h3>🟠 AYA SEO 现状</h3>
+      <ul class="pros-cons">
+        <li><span>✅</span><span>强大的博文系统，深度分析政策 (CBAM) 对行业影响</span></li>
+        <li><span>✅</span><span>高权威外链布局，大量引用行业资讯和解决方案案例</span></li>
+        <li><span>✅</span><span>关键词矩阵覆盖“Custom Fasteners”及各细分应用领域</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <div class="section-num">04</div>
+    <div>
+      <h2>网站体验与品牌信任</h2>
+      <p>视觉叙事与 B2B 信任背书</p>
+    </div>
+  </div>
+  <div class="alert alert-gold">
+    <div class="alert-icon">⚡</div>
+    <div class="alert-text"><strong>逻辑硬伤：</strong>FASTO 首页宣称“25 years of reliable brand”，但 About 页面写着“Founded in 2005”。对于极其看重稳定性的 B2B 客户，此类细节不一致可能引发诚信疑虑。</div>
+  </div>
+  <div class="compare-grid">
+    <div class="compare-card brand1">
+      <h3>🔵 FASTO 体验</h3>
+      <ul class="pros-cons">
+        <li><span>✅</span><span>展示盐雾测试、扭矩测试视频，极具工厂说服力</span></li>
+        <li><span>✅</span><span>询盘 CTA 明确，响应时间承诺 (12h) 降低沟通成本</span></li>
+        <li><span>❌</span><span>设计风格偏传统“出口目录型”，缺乏行业深度叙事</span></li>
+      </ul>
+    </div>
+    <div class="compare-card brand2">
+      <h3>🟠 AYA 体验</h3>
+      <ul class="pros-cons">
+        <li><span>✅</span><span>“方案型”设计理念，通过“Solution”引导而非硬卖产品</span></li>
+        <li><span>✅</span><span>视觉极具现代感，传达出“全球化公司”的高溢价品牌形象</span></li>
+        <li><span>❌</span><span>部分 About-us 页面存在空链接，维护频率需加强</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <div class="section-num">05</div>
+    <div>
+      <h2>综合评分</h2>
+      <p>各维度多项评分 vs 行业标杆</p>
+    </div>
+  </div>
+  <div class="score-grid">
+    <div class="score-row">
+      <div class="score-label">流量规模</div>
+      <div class="score-bars">
+        <div class="score-bar-row"><div class="score-bar-name">FASTO</div><div class="score-bar-bg"><div class="score-bar-fill fill-1" style="width:40%"></div></div><div class="score-num n1">4</div></div>
+        <div class="score-bar-row"><div class="score-bar-name">AYA</div><div class="score-bar-bg"><div class="score-bar-fill fill-2" style="width:70%"></div></div><div class="score-num n2">7</div></div>
+      </div>
+    </div>
+    <div class="score-row">
+      <div class="score-label">SEO 能力</div>
+      <div class="score-bars">
+        <div class="score-bar-row"><div class="score-bar-name">FASTO</div><div class="score-bar-bg"><div class="score-bar-fill fill-1" style="width:30%"></div></div><div class="score-num n1">3</div></div>
+        <div class="score-bar-row"><div class="score-bar-name">AYA</div><div class="score-bar-bg"><div class="score-bar-fill fill-2" style="width:85%"></div></div><div class="score-num n2">8.5</div></div>
+      </div>
+    </div>
+    <div class="score-row">
+      <div class="score-label">内容营销</div>
+      <div class="score-bars">
+        <div class="score-bar-row"><div class="score-bar-name">FASTO</div><div class="score-bar-bg"><div class="score-bar-fill fill-1" style="width:35%"></div></div><div class="score-num n1">3.5</div></div>
+        <div class="score-bar-row"><div class="score-bar-name">AYA</div><div class="score-bar-bg"><div class="score-bar-fill fill-2" style="width:90%"></div></div><div class="score-num n2">9</div></div>
+      </div>
+    </div>
+    <div class="score-row">
+      <div class="score-label">产品专业度</div>
+      <div class="score-bars">
+        <div class="score-bar-row"><div class="score-bar-name">FASTO</div><div class="score-bar-bg"><div class="score-bar-fill fill-1" style="width:85%"></div></div><div class="score-num n1">8.5</div></div>
+        <div class="score-bar-row"><div class="score-bar-name">AYA</div><div class="score-bar-bg"><div class="score-bar-fill fill-2" style="width:80%"></div></div><div class="score-num n2">8</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <div class="section-num">06</div>
+    <div>
+      <h2>改进建议卡片</h2>
+      <p>基于数据分析的优先改进动作</p>
+    </div>
+  </div>
+  <div class="rec-grid">
+    <div class="rec-card">
+      <div class="rec-priority priority-urgent">🚨 紧急 · 立即执行</div>
+      <h4>修复 404 错误页面</h4>
+      <p>立即修复 /blog/ 页面。对于紧固件行业，技术文章是 B2B 客户建立初步信任的关键入口。</p>
+    </div>
+    <div class="rec-card">
+      <div class="rec-priority priority-urgent">🚨 紧急 · 品牌一致性</div>
+      <h4>校对品牌宣传时间线</h4>
+      <p>统一全站关于“品牌成立时间”的表述（2005年 vs 25年），避免在信任建立初期产生负面信号。</p>
+    </div>
+    <div class="rec-card">
+      <div class="rec-priority priority-high">⚡ 高优 · SEO 攻坚</div>
+      <h4>布局双金属螺丝技术专题</h4>
+      <p>针对 Bimetal Screws 撰写包含应用场景、安装指南、材质对比的博文，打造行业细分技术权威感。</p>
+    </div>
+    <div class="rec-card">
+      <div class="rec-priority priority-high">⚡ 高优 · 视觉升维</div>
+      <h4>从“卖产品”转向“卖方案”</h4>
+      <p>参考竞对 AYA，在首页增加“应用行业解决方案”模块，强化针对太阳能、汽车、建筑领域的专业度。</p>
+    </div>
+    <div class="rec-card">
+      <div class="rec-priority priority-mid">✅ 中优 · 客户见证</div>
+      <h4>增加实地场景与成功案例</h4>
+      <p>将首页简单的产品展示升级为：[产品] + [使用环境照片] + [客户评价]，增强真实感。</p>
+    </div>
+    <div class="rec-card">
+      <div class="rec-priority priority-mid">✅ 中优 · 社交互动</div>
+      <h4>LinkedIn 专家化经营</h4>
+      <p>不仅发布产品照片，更应由技术专家在 LinkedIn 发布关于紧固件质量检测的见解，反向引流官网。</p>
+    </div>
+  </div>
+
+  <div class="verdict">
+    <h3>📋 分析结论（Verdict）</h3>
+    <p><strong>FASTO</strong> 拥有非常扎实的<strong>“扫地僧”基因</strong>——其核心制造能力和检测流程达到了行业一流水平，但这些宝贵的技术资产被锁死在了一个相对传统的“目录型网站”中。与行业标杆 <strong>AYA Fasteners</strong> 相比，最大的差距不在于产品质量，而在于<strong>“品牌叙事能力”</strong>和<strong>“内容护城河”</strong>。</p>
+    <br/>
+    <p><strong>改进路径：</strong>修复技术层面的 404 缺陷是第一优先级；随后应迅速将工厂的“检测数据”转化为“教育型内容”，在 SEO 侧形成技术壁垒。只要能将这种实干精神通过现代化的方案型设计表达出来，FASTO 极具赶超标杆的潜力。</p>
+  </div>
+
+  <div class="footer">
+    <p>本报告由 <strong>Accio Work AI</strong> 独立站竞品分析系统生成 · 数据来源：官网实访、Similarweb 估算、公开商业信息</p>
+    <p style="margin-top:8px;">报告生成时间：2026年6月 · 仅供战略参考，数据以最新官方来源为准</p>
+  </div>
+</div>
+</body>
+</html>

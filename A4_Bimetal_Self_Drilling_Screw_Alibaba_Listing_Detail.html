@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alibaba Listing Product Detail - FASTO A4 Bi-Metal Hex Head Self-Drilling Screw</title>
+  <style>
+    body {
+      font-family: 'DIN 1451', 'Helvetica Neue', Arial, sans-serif;
+      color: #1E293B;
+      background-color: #F1F5F9;
+      margin: 0;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #FFFFFF;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .header {
+      background-color: #0F172A;
+      color: #FFFFFF;
+      padding: 40px;
+      border-bottom: 5px solid #3B82F6;
+    }
+    .header h1 {
+      margin: 0 0 10px 0;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      line-height: 1.2;
+    }
+    .header h2 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      font-weight: 500;
+      color: #94A3B8;
+      line-height: 1.3;
+    }
+    .header h3 {
+      margin: 0;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      color: #38BDF8;
+    }
+    .content-padding {
+      padding: 40px;
+    }
+    h2.section-title {
+      font-size: 22px;
+      color: #0F172A;
+      border-bottom: 2px solid #E2E8F0;
+      padding-bottom: 8px;
+      margin-top: 45px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    h2.section-title:first-of-type {
+      margin-top: 10px;
+    }
+    h3.sub-section-title {
+      font-size: 17px;
+      color: #1E293B;
+      margin-top: 25px;
+      margin-bottom: 12px;
+      border-left: 4px solid #3B82F6;
+      padding-left: 10px;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #334155;
+    }
+    ul, ol {
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+      color: #334155;
+    }
+    .highlight-label {
+      font-weight: bold;
+      color: #0F172A;
+    }
+    .table-container {
+      overflow-x: auto;
+      margin: 25px 0;
+      border-radius: 6px;
+      border: 1px solid #E2E8F0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      text-align: left;
+    }
+    th {
+      background-color: #334155;
+      color: #FFFFFF;
+      font-weight: 600;
+      padding: 12px 16px;
+      border: 1px solid #E2E8F0;
+    }
+    td {
+      padding: 12px 16px;
+      border: 1px solid #E2E8F0;
+      color: #334155;
+    }
+    tr:nth-child(even) td {
+      background-color: #F8FAFC;
+    }
+    .blockquote {
+      border-left: 4px solid #3B82F6;
+      padding: 12px 20px;
+      margin: 15px 0;
+      background-color: #F8FAFC;
+      font-size: 14.5px;
+      color: #0F172A;
+      font-weight: 500;
+      border-radius: 0 6px 6px 0;
+    }
+    .visual-suggestion {
+      background-color: #FAFAFA;
+      border-left: 3px solid #D4D4D8;
+      padding: 15px;
+      margin: 20px 0;
+      font-style: italic;
+      color: #52525B;
+      line-height: 1.6;
+      font-size: 13.5px;
+    }
+    .visual-title {
+      font-weight: bold;
+      font-style: normal;
+      color: #1E293B;
+      margin-bottom: 8px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .visual-title::before {
+      content: '🎨 ';
+    }
+    .copywriting-box {
+      background-color: #0F172A;
+      color: #F8FAFC;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 24px;
+      border-radius: 8px;
+      margin: 20px 0;
+      line-height: 1.6;
+      overflow-x: auto;
+      font-size: 13px;
+      border-left: 4px solid #10B981;
+    }
+    .copy-title {
+      font-family: 'DIN 1451', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: bold;
+      color: #38BDF8;
+      margin-bottom: 15px;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #1E293B;
+      padding-bottom: 8px;
+    }
+    .warning-card {
+      background-color: #FFFBEB;
+      border-left: 4px solid #F59E0B;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 4px;
+    }
+    .warning-title {
+      font-weight: bold;
+      color: #B45309;
+      font-size: 15px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .warning-title::before {
+      content: '⚠️ ';
+    }
+    .warning-content {
+      color: #78350F;
+      font-size: 14px;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .footer {
+      background-color: #0F172A;
+      color: #64748B;
+      padding: 30px 40px;
+      text-align: center;
+      font-size: 13px;
+      border-top: 1px solid #1E293B;
+    }
+    .footer p {
+      margin: 5px 0;
+      color: #64748B;
+    }
+    .card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    .card-header {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #F1F5F9;
+      padding-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .card-badge {
+      background-color: #3B82F6;
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-right: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- HEADER PANEL -->
+    <div class="header">
+      <h1>ALIBABA LISTING PRODUCT DETAIL MASTER DOCUMENT</h1>
+      <h2>PRODUCT: FASTO A4 Bi-Metal Hex Head Self-Drilling Screw with EPDM Washer (5.5x40mm, Tek 5)</h2>
+      <h3>FASTO INDUSTRIAL CO., LTD. - CONFIDENTIAL / FOR INTERNAL OPERATIONS &amp; B2B LISTING USE</h3>
+    </div>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="content-padding">
+
+      <!-- PART 1 -->
+      <h2 class="section-title">Part 1: PRODUCT BASIC INFO &amp; SEO TITLE (产品基础信息与SEO标题)</h2>
+      
+      <h3 class="sub-section-title">1.1 Core Specifications</h3>
+      <ul>
+        <li><span class="highlight-label">Product Model:</span> ST5.5 x 40mm (#12 Gauge x 1-1/2")</li>
+        <li><span class="highlight-label">Drill Point Type:</span> No. 5 Point (Tek 5, cutting length L<sub>2</sub> = 14.5 mm)</li>
+        <li><span class="highlight-label">Head Style:</span> Hexagon Washer Head (with collar, DIN 7504K compatible)</li>
+        <li><span class="highlight-label">Head Marking:</span> <strong>FS4</strong> (Convex, embossed "FS" manufacturer logo + high-relief numeral "4" indicating Class 4 &amp; Grade A4)</li>
+        <li><span class="highlight-label">Sealing Washer:</span> Pre-assembled A4 Stainless Steel Bonded EPDM Washer (16.0mm outer diameter)</li>
+        <li><span class="highlight-label">Surface Treatment:</span> Multi-layer Ruspert Ceramic-Organic Coating (Silver-Grey, 1500-Hour SST certified)</li>
+        <li><span class="highlight-label">Minimum Order Quantity (MOQ):</span> 5,000 PCS</li>
+        <li><span class="highlight-label">Recommended Drill Speed:</span> 1500 – 2500 RPM (Typical 2000 RPM)</li>
+        <li><span class="highlight-label">Standard Unit Weight:</span> ~10.4g per piece</li>
+      </ul>
+
+      <h3 class="sub-section-title">1.2 Premium SEO Titles Suite (SEO 优化产品标题包)</h3>
+      
+      <p style="font-weight: bold; margin-top: 15px; margin-bottom: 5px; color: #334155;">1.2.1 Global High-Traffic Core SEO Title (核心高流量主标题 - 优先推荐)</p>
+      <div class="blockquote">
+        A4 Stainless Steel 316 Bi-Metal Self Drilling Screw 5.5x40mm Tek 5 Hex Washer Head No.5 Point SCM435 Ruspert Class 5 Heavy Duty Metal Roofing Screws
+      </div>
+      <p style="font-size: 13px; color: #64748B; margin-top: -10px; margin-bottom: 25px;">
+        <em>* Character Count:</em> 148 Characters (Perfectly fits Alibaba's 120-150 character limit for maximum SEO ranking, naturally flows with highly-searched industrial keywords).
+      </p>
+
+      <p style="font-weight: bold; margin-top: 20px; margin-bottom: 10px; color: #334155;">1.2.2 Niche Market Targeted Titles (针对区域细分市场的备选标题)</p>
+      <ul style="list-style-type: none; padding-left: 0;">
+        <li style="margin-bottom: 20px; padding: 15px; border: 1px solid #E2E8F0; border-radius: 6px; background-color: #FAFAFA;">
+          <strong style="color: #0F172A; display: block; margin-bottom: 8px;">• Europe Market / Carbon Border &amp; Standard Oriented (欧洲环保与碳边境市场备选标题)</strong>
+          <span style="display: block; font-family: monospace; background-color: #FFFFFF; border-left: 3px solid #10B981; padding: 8px 12px; margin-bottom: 8px; color: #1E293B;">
+            ETA CE Certified A4 316 Stainless Steel Bi-Metal Self Drilling Screw 5.5x40mm Tek 5 No.5 Point CBAM Compliant Ruspert Class 4 Metal Roofing Screws
+          </span>
+          <span style="font-size: 13px; color: #52525B;"><em>Focus:</em> Highlights ETA &amp; CE certifications, Grade A4/316 metallurgy, and CBAM (Carbon Border Adjustment Mechanism) carbon-tariff exempt compliance to target European roofing procurement auditors.</span>
+        </li>
+        <li style="margin-bottom: 20px; padding: 15px; border: 1px solid #E2E8F0; border-radius: 6px; background-color: #FAFAFA;">
+          <strong style="color: #0F172A; display: block; margin-bottom: 8px;">• Middle East Market / High-Corrosion &amp; Infrastructure Oriented (中东高盐雾基建项目备选标题)</strong>
+          <span style="display: block; font-family: monospace; background-color: #FFFFFF; border-left: 3px solid #10B981; padding: 8px 12px; margin-bottom: 8px; color: #1E293B;">
+            AS 3566 Class 5 Bi-Metal Self Drilling Screw 5.5x40mm Tek 5 No.5 Point Ruspert 1500H C5-M Marine Anti-Corrosive Hex Head Airport Roofing Screws
+          </span>
+          <span style="font-size: 13px; color: #52525B;"><em>Focus:</em> Highlights AS 3566 Class 5 corrosion standard, 1500 Hours Salt Spray Test (SST), C5-M extreme marine salinity proof, and airport terminal roofing system applications.</span>
+        </li>
+        <li style="margin-bottom: 10px; padding: 15px; border: 1px solid #E2E8F0; border-radius: 6px; background-color: #FAFAFA;">
+          <strong style="color: #0F172A; display: block; margin-bottom: 8px;">• North America Market / Heavy Structural Steel &amp; Energy Oriented (北美重型钢构与能源支架市场备选标题)</strong>
+          <span style="display: block; font-family: monospace; background-color: #FFFFFF; border-left: 3px solid #10B981; padding: 8px 12px; margin-bottom: 8px; color: #1E293B;">
+            Tek 5 Heavy Duty Bi-Metal Self Drilling Screw 5.5x40mm No.5 Point 316 Stainless Steel 1/2 inch Steel Penetration Hex Head Solar Racking Screws
+          </span>
+          <span style="font-size: 13px; color: #52525B;"><em>Focus:</em> Highlights Tek 5 (No.5 Point) extreme cutting force, 1/2 inch (12.0mm) structural steel penetration, 316 Stainless Steel material, and heavy steel framing / solar panel PV racking connections.</span>
+        </li>
+      </ul>
+
+
+      <!-- PART 2 -->
+      <h2 class="section-title">Part 2: ALIBABA PRODUCT ATTRIBUTES TABLE (国际站后台必填/核心系统参数表)</h2>
+      <p style="font-style: italic; color: #64748B; margin-bottom: 15px;">To achieve an Excellent Listing Information Score (LIS &ge; 4.8), the operations team must input the following 23 parameters exactly as listed below in the Alibaba backend supplier dashboard.</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 5%; text-align: center;">#</th>
+              <th style="width: 25%;">Attribute Name (系统属性字段)</th>
+              <th style="width: 42%;">Recommended Input Value (推荐录入值)</th>
+              <th style="width: 28%;">Technical Data Source &amp; Standard</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center;">1</td>
+              <td><strong>Product Name</strong></td>
+              <td>A4 Bi-Metal Hex Head Self-Drilling Screw with EPDM Washer</td>
+              <td>Datasheet Section 1 / AS 3566.1</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">2</td>
+              <td><strong>Material</strong></td>
+              <td>Stainless Steel A4-316 (Body) + SCM435 Hardened Carbon Steel (Point)</td>
+              <td>Datasheet Section 2.1 / EN ISO 3506-1</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">3</td>
+              <td><strong>Size / Dimensions</strong></td>
+              <td>ST5.5 x 40 mm (#12 Gauge x 1-1/2")</td>
+              <td>Datasheet Section 1 / DIN 7504K</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">4</td>
+              <td><strong>Head Style</strong></td>
+              <td>Hexagon Washer Head / Hex Head with Collar</td>
+              <td>Datasheet Section 1 / DIN 7504K</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">5</td>
+              <td><strong>Head Marking</strong></td>
+              <td>FS4 (Convex "FS" + "4" High-Relief Logo)</td>
+              <td>Datasheet Section 5 / Manufacturer QA/QC Std</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">6</td>
+              <td><strong>Drill Point Type</strong></td>
+              <td>Tek 5 / No. 5 Point (Point Length: 14.5mm)</td>
+              <td>Datasheet Section 5 / AS 3566.1</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">7</td>
+              <td><strong>Drilling Capacity</strong></td>
+              <td>4.0 mm – 12.0 mm (Structural Carbon Steel S355)</td>
+              <td>Datasheet Section 4.2 / AS 3566.1</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">8</td>
+              <td><strong>Surface Treatment</strong></td>
+              <td>Multi-Layer Silver-Grey Ruspert Ceramic Coating</td>
+              <td>Datasheet Section 3.1 / ASTM B117 / ISO 9227</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">9</td>
+              <td><strong>Corrosion Resistance</strong></td>
+              <td>1500 Hours Neutral Salt Spray Test (NSS) - Zero Red Rust</td>
+              <td>Datasheet Section 3.3 / AS 3566.2 Class 4 &amp; 5</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">10</td>
+              <td><strong>Sealing Washer</strong></td>
+              <td>A4 Stainless Steel Bonded EPDM Washer (OD: 16.0mm)</td>
+              <td>Datasheet Section 1 / DIN 6928 / AS 3566.1</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">11</td>
+              <td><strong>Ultimate Tensile Strength</strong></td>
+              <td>13.8 kN (Ultimate Mean Value)</td>
+              <td>Datasheet Section 4.1 / ISO 6892-1 / AS 3566.1</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">12</td>
+              <td><strong>Ultimate Shear Strength</strong></td>
+              <td>11.3 kN (Double Shear Ultimate Mean Value)</td>
+              <td>Datasheet Section 4.1 / AS 3566.1</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">13</td>
+              <td><strong>Minimum Torsion Strength</strong></td>
+              <td>11.5 N·m (Exceeds 10.4 N·m ISO standard)</td>
+              <td>Datasheet Section 4.1 / EN ISO 10666</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">14</td>
+              <td><strong>Tightening Torque</strong></td>
+              <td>6.0 – 8.0 N·m (Ensures EPDM 70% compression)</td>
+              <td>Datasheet Section 6 / Manufacturer Guideline</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">15</td>
+              <td><strong>Certificates</strong></td>
+              <td>SGS, CE (CPR), ETA, CBAM Compliant, ISO 9001, IATF 16949</td>
+              <td>Datasheet Section 7 / European Building Codes</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">16</td>
+              <td><strong>Environmental Class</strong></td>
+              <td>ISO 9223 C4 (Severe Marine/Industrial), C5-M &amp; C5-I</td>
+              <td>Datasheet Section 3.3 / AS 3566.2</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">17</td>
+              <td><strong>Application</strong></td>
+              <td>Steel-to-steel roofing connections, Solar mounting system, Coastal constructions</td>
+              <td>Structural Engineering</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">18</td>
+              <td><strong>Standard Complied</strong></td>
+              <td>AS 3566.1, AS 3566.2, DIN 7504K, EN ISO 10666, EN ISO 3506-1</td>
+              <td>Datasheet Section 7</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">19</td>
+              <td><strong>OEM Customization</strong></td>
+              <td>Embossed Head Logo (&ge;50,000 PCS), Custom Box Size &amp; Labeling</td>
+              <td>OEM B2B Services</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">20</td>
+              <td><strong>Standard Unit Weight</strong></td>
+              <td>10.4 g/pcs</td>
+              <td>Quality Control Department</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">21</td>
+              <td><strong>Packaging Specifications</strong></td>
+              <td>200 PCS/Box, 10 Boxes/Carton, 36 Cartons/Pallet</td>
+              <td>Sea-Freight Standard</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">22</td>
+              <td><strong>MOQ</strong></td>
+              <td>5,000 PCS</td>
+              <td>Sales Policy</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">23</td>
+              <td><strong>Sample Policy</strong></td>
+              <td>Free Samples (10-20 PCS), Freight Collect</td>
+              <td>QA/QC Testing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <!-- PART 3 -->
+      <h2 class="section-title">Part 3: STRUCTURAL CARDS LISTING DETAIL LAYOUT (详情页卡片式分屏终稿)</h2>
+
+      <!-- CARD 1 -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-badge">Module 1</span> HERO BANNER &amp; BUYER HOOK (首屏Banner与核心痛点吸引)
+        </div>
+        
+        <div class="visual-suggestion">
+          <div class="visual-title">Visual Asset Suggestion (美工设计指引)</div>
+          <strong>Composition:</strong> 3D perspective close-up render. A single 5.5x40mm bimetal self-drilling screw is positioned diagonally at 45 degrees, cutting across a dark brushed titanium background.<br>
+          <strong>Focal Point:</strong> The hexagon head in the foreground (left-middle portion) features a highly detailed, crisp, convex "FS" manufacturer mark alongside a sharp relief numeral "4" (FS4 head marking).<br>
+          <strong>Lighting:</strong> Rembrandt side-lighting. A sharp, cool blue-white directional light (120°) casts high-contrast, well-defined micro-shadows underneath the embossed "FS" logo, giving it a heavy, high-relief dimensional texture.<br>
+          <strong>Atmosphere &amp; Palette:</strong> Cold blue, silver metallic reflections, and dark slate textures. CE, ETA, and CBAM certificates with subtle drop shadows are elegantly placed on the right side of the background, establishing instant structural authority.<br>
+          <strong>Midjourney Prompt Reference:</strong><br>
+          <span style="display:block; margin-top:6px; padding: 10px; background-color:#F1F5F9; border-radius:4px; font-family: monospace; font-size:12px; color:#475569;">
+            Extreme macro Hasselblad photo of a high-end hex washer head bimetal self-drilling screw, angled at 45 degrees on a dark brushed titanium background. The screw body is made of Grade A4 (316) stainless steel, showing a highly polished, bright metallic silver sheen with sharp helical threads. The tip is an induction-hardened dark grey SCM435 steel point with a matte silver-grey Ruspert coating, creating a strong textural contrast. The hexagon head in the foreground features a clearly embossed, convex "FS" logo brand stamp, catching studio directional light with sharp highlights and defined micro-shadows. Cinematic studio lighting, Octane Render, 8k, photorealistic, German mechanical engineering aesthetics, cold blue metallic color palette, ultra-realistic metal textures --ar 1:1 --v 6.0 --style raw
+          </span>
+        </div>
+
+        <div class="copywriting-box">
+          <div class="copy-title">FASTO INDUSTRIAL CO., LTD. — Your Trusted Partner in Extreme Structural Connections</div>
+          <div style="font-weight: bold; font-size:15px; color:#38BDF8; margin-bottom:12px;">THE ULTIMATE STRUCTURAL ANCHOR FOR HARSH ENVIRONMENTS</div>
+          <div style="font-weight: bold; margin-bottom:15px; color:#E2E8F0;">One-Step Penetration up to 12.0mm Steel | Ultimate Grade A4 (316) Lifetime Corrosion Resistance</div>
+          
+          <p style="color: #E2E8F0;">Are you tired of head-snapping, drill-point burning, or early rust failures on your heavy-duty industrial roofing projects?</p>
+          
+          <p style="color: #E2E8F0;">FASTO’s Premium Grade A4 (316) Bi-Metal Self-Drilling Screws (5.5x40mm, Tek 5) are engineered to bridge the gap between supreme anti-corrosion and heavy-duty drilling force. Fusing a Molybdenum-enriched Grade A4 Stainless Steel body with an Induction-Hardened SCM435 Carbon Steel Tek 5 drill point via molecular linear friction welding, this fastener penetrates heavy structural steel up to 12mm thick in seconds while offering lifetime protection against the most aggressive saline and acidic environments.</p>
+          
+          <ul style="margin-left: 0; padding-left: 15px; color: #E2E8F0; margin-bottom:0;">
+            <li style="color: #E2E8F0;"><span style="color:#10B981; font-weight:bold;">●</span> <span style="font-weight:bold; color:#FFFFFF;">ZERO-PRE-DRILLING:</span> Cuts and taps through structural steel (4.0mm to 12.0mm) in one seamless operation.</li>
+            <li style="color: #E2E8F0;"><span style="color:#10B981; font-weight:bold;">●</span> <span style="font-weight:bold; color:#FFFFFF;">CLASS 5 CORROSION DEFENSE:</span> Designed to meet and exceed AS 3566 Class 4/5 and ISO 9223 C4, C5-M (Extreme Marine) and C5-I (High Industrial / Acidic Environments) guidelines with a Ruspert 1500-Hour multi-layer protective coating.</li>
+            <li style="color: #E2E8F0;"><span style="color:#10B981; font-weight:bold;">●</span> <span style="font-weight:bold; color:#FFFFFF;">AUTHENTICITY GUARANTEED:</span> Embossed with our signature "FS4" head marking, indicating genuine FASTO origin and Class 4/Grade A4 engineering credentials for hassle-free QA/QC inspections.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-badge">Module 2</span> BIMETALLIC MOLECULAR FUSION (核心卖点：双金属熔合摩擦焊)
+        </div>
+        
+        <div class="visual-suggestion">
+          <div class="visual-title">Visual Asset Suggestion (美工设计指引)</div>
+          <strong>Composition:</strong> Extreme microscopic horizontal profile render of the screw shank. The left side showcases the high-polish, bright mirror-metallic silver of the A4-316 stainless steel shank; the right side displays the matte, dark charcoal-grey SCM435 induction-hardened carbon steel drill tip.<br>
+          <strong>Focal Point:</strong> The center welding interface where the two metals fuse. High-precision Linear Friction Welding (LFW) is shown as a neat, micro-wave solid-state weld seam (no slag, no porosity).<br>
+          <strong>Special Effect:</strong> A circular fluorescent green magnifying glass icon labeled "<strong>&times;100 Microscopic Lattice Detail</strong>" overlays the weld seam, illustrating a perfect, seamless, molecular-level interlocking grain structure.<br>
+          <strong>Lighting:</strong> Clinical, technical studio ring-lighting with sharp metallic highlights running horizontally along the screw threads.<br>
+          <strong>Key Technical Labeling Overlaid:</strong>
+          <ul style="margin: 5px 0 0 15px; padding: 0;">
+            <li><em>Austenitic A4-316 Body</em> (16-18% Cr, 10-14% Ni, 2-3% Mo) &rarr; Resists pitting and marine chloride attack.</li>
+            <li><em>Induction-Hardened SCM435 Tip</em> (&ge; 550 HV<sub>0.3</sub> Surface Hardness) &rarr; Cuts heavy steel with ease.</li>
+            <li><em>Molecular Fusion Seam</em> &rarr; Zero risk of weld separation. Ultimate Torsion Strength: <strong>11.5 N·m</strong> (Exceeds 10.4 N·m standard).</li>
+          </ul>
+        </div>
+
+        <div class="copywriting-box">
+          <div class="copy-title">MATERIAL SUPERIORITY: MOLECULAR-LEVEL BIMETALLIC FUSION</div>
+          <div style="font-weight: bold; font-size:15px; color:#38BDF8; margin-bottom:15px;">Engineered with Advanced Solid-State Linear Friction Welding (LFW)</div>
+          
+          <p style="color: #E2E8F0;">To achieve both absolute lifetime corrosion resistance and high-strength structural steel drilling capabilities, the FASTO fastener utilizes a Bimetallic (Bi-Metal) hybrid design:</p>
+          
+          <ul style="margin-left: 0; padding-left: 15px; color: #E2E8F0; margin-bottom: 0;">
+            <li style="color: #E2E8F0; margin-bottom:15px;">
+              <span style="font-weight:bold; color:#FFFFFF; font-size:13.5px; text-transform:uppercase; letter-spacing:0.5px;">THE AUSTENITIC BODY (GRADE A4 / AISI 316):</span><br>
+              The screw body and load-bearing threads are manufactured from authentic Grade A4 (316) Stainless Steel. Formulated with 16–18% Chromium (Cr), 10–14% Nickel (Ni), and 2–3% Molybdenum (Mo), it provides outstanding resistance to chloride-induced stress corrosion, pitting, and intergranular decay.
+            </li>
+            <li style="color: #E2E8F0; margin-bottom:15px;">
+              <span style="font-weight:bold; color:#FFFFFF; font-size:13.5px; text-transform:uppercase; letter-spacing:0.5px;">THE HARDENED POINT (SCM435 ALLOY):</span><br>
+              The cutting point is manufactured from high-performance SCM435 alloy steel, induction-hardened to achieve a surface hardness exceeding 550 HV<sub>0.3</sub> and a core hardness of approximately 350–450 HV<sub>0.3</sub>. It easily grinds through heavy structural steel without dulling.
+            </li>
+            <li style="color: #E2E8F0; margin-bottom:0;">
+              <span style="font-weight:bold; color:#FFFFFF; font-size:13.5px; text-transform:uppercase; letter-spacing:0.5px;">SOLID-STATE FRICTION WELDING:</span><br>
+              The non-rusting A4 body and the ultra-hard SCM435 tip are molecularly joined using high-precision Linear Friction Welding (LFW). This process creates a molecular-level solid-state joint at the fusion interface. The weld zone has torsional and tensile strength that exceeds that of the parent materials, ensuring zero risk of "head-snapping" or "tip separation" under high-torque installation.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-badge">Module 3</span> PENETRATION POWER (强悍攻丝：12mm结构钢一穿到底)
+        </div>
+        
+        <div class="visual-suggestion">
+          <div class="visual-title">Visual Asset Suggestion (美工设计指引)</div>
+          <strong>Composition:</strong> A dynamic high-speed shutter-action composition. The Tek 5 (No. 5 Point) drill tip of the screw is captured rotating at 2000 RPM, penetrating a 12.0 mm thick plate of S355 structural carbon steel.<br>
+          <strong>Action Details:</strong> Sharp, large, spiraling blue-purple metal shavings (shavings evacuated from dual-flute cutting edges) are shown flying outward in mid-air.<br>
+          <strong>Special Effects:</strong> Bright golden-orange friction sparks erupt from the point of contact, illuminating the screw shank and the surrounding steel surface, capturing intense physical power and speed.<br>
+          <strong>Technical Dimensioning Overlaid:</strong> A vertical dashed line indicates L<sub>2</sub> = 14.5 mm (Point Length) alongside a structural metal plate of 12.0 mm. A callout text box notes: <em>"14.5mm Point Length ensures the entire drill point passes completely through the 12mm steel plate before the first thread engages, preventing thread stripping or tool binding."</em>
+        </div>
+
+        <div class="copywriting-box">
+          <div class="copy-title">EXTREME PENETRATION: TEK 5 (NO.5) HEAVY-DUTY DRILL POINT</div>
+          <div style="font-weight: bold; font-size:15px; color:#38BDF8; margin-bottom:15px;">One-Pass Operation through Structural Steel (4.0mm to 12.0mm)</div>
+          
+          <p style="color: #E2E8F0;">No pre-drilling, no pre-punching. FASTO's Tek 5 point geometry features dual-flute cutting channels designed to tap, thread, and lock structural joints in less than 5 seconds at 2000 RPM.</p>
+          
+          <ul style="margin-left: 0; padding-left: 15px; color: #E2E8F0; margin-bottom: 25px;">
+            <li style="color: #E2E8F0; margin-bottom:10px;">
+              <span style="font-weight:bold; color:#FFFFFF;">12.0MM ONE-PASS CAPABILITY:</span> The extra-long 14.5mm drill point (L<sub>2</sub>) is scientifically calculated to ensure that the entire carbon steel cutting segment passes completely through the 12.0mm structural steel plate before the first load-bearing thread engages. This completely prevents thread stripping, tool binding, or joint torque-out.
+            </li>
+            <li style="color: #E2E8F0; margin-bottom:0;">
+              <span style="font-weight:bold; color:#FFFFFF;">RAPID DRILLING CYCLE:</span> The geometry of the Tek 5 point features sharp cutting edges that evacuate steel shavings fast, reducing friction heat and preventing drill tip burnout or annealing.
+            </li>
+          </ul>
+
+          <div style="font-weight: bold; color:#FFFFFF; margin-top:20px; margin-bottom:10px; font-size:13.5px; text-transform:uppercase; border-top:1px solid #1E293B; padding-top:15px; letter-spacing:0.5px;">
+            ULTIMATE PULL-OUT RESISTANCE IN STRUCTURAL STEEL (S355 / Grade 350)
+          </div>
+          <p style="font-size:12px; color:#94A3B8; margin-bottom:12px;">Tested in accordance with AS 3566.1 (Ultimate Mean Unfactored Values):</p>
+          
+          <div class="table-container" style="border-color: #1E293B; margin: 10px 0;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr style="background-color: #1E293B;">
+                  <th style="border: 1px solid #334155; color: #38BDF8; padding: 10px; width: 40%;">Substrate Steel Thickness</th>
+                  <th style="border: 1px solid #334155; color: #38BDF8; padding: 10px; text-align: center; width: 30%;">Pull-out Strength (kN)</th>
+                  <th style="border: 1px solid #334155; color: #38BDF8; padding: 10px; text-align: center; width: 30%;">Pull-out Strength (kgf)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border: 1px solid #334155; color: #FFFFFF; padding: 10px; font-weight: bold; background-color: #0F172A;">4.0 mm</td>
+                  <td style="border: 1px solid #334155; color: #F8FAFC; padding: 10px; text-align: center; background-color: #0F172A;">6.8 kN</td>
+                  <td style="border: 1px solid #334155; color: #F8FAFC; padding: 10px; text-align: center; background-color: #0F172A;">693 kgf</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #334155; color: #FFFFFF; padding: 10px; font-weight: bold; background-color: #1E293B;">5.0 mm</td>
+                  <td style="border: 1px solid #334155; color: #F8FAFC; padding: 10px; text-align: center; background-color: #1E293B;">7.4 kN</td>
+                  <td style="border: 1px solid #334155; color: #F8FAFC; padding: 10px; text-align: center; background-color: #1E293B;">754 kgf</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #334155; color: #FFFFFF; padding: 10px; font-weight: bold; background-color: #0F172A;">6.0 mm</td>
+                  <td style="border: 1px solid #334155; color: #F8FAFC; padding: 10px; text-align: center; background-color: #0F172A;">8.2 kN</td>
+                  <td style="border: 1px solid #334155; color: #F8FAFC; padding: 10px; text-align: center; background-color: #0F172A;">836 kgf</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #334155; color: #FFFFFF; padding: 10px; font-weight: bold; background-color: #1E293B;">8.0 mm</td>
+                  <td style="border: 1px solid #334155; color: #F8FAFC; padding: 10px; text-align: center; background-color: #1E293B;">9.7 kN</td>
+                  <td style="border: 1px solid #334155; color: #F8FAFC; padding: 10px; text-align: center; background-color: #1E293B;">989 kgf</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #334155; color: #FFFFFF; padding: 10px; font-weight: bold; background-color: #0F172A;">10.0 mm</td>
+                  <td style="border: 1px solid #334155; color: #F8FAFC; padding: 10px; text-align: center; background-color: #0F172A;">10.4 kN</td>
+                  <td style="border: 1px solid #334155; color: #F8FAFC; padding: 10px; text-align: center; background-color: #0F172A;">1060 kgf</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #334155; color: #FFFFFF; padding: 10px; font-weight: bold; background-color: #1E293B;">12.0 mm / 12.5 mm</td>
+                  <td style="border: 1px solid #334155; color: #F8FAFC; padding: 10px; text-align: center; background-color: #1E293B;">11.9 kN</td>
+                  <td style="border: 1px solid #334155; color: #F8FAFC; padding: 10px; text-align: center; background-color: #1E293B;">1213 kgf</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:11px; color:#94A3B8; margin-top:8px; margin-bottom:0;"><em>* Engineers must apply an appropriate safety factor (typical &Phi; = 0.50 to 0.65) for structural load calculations.</em></p>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-badge">Module 4</span> TRIPLE-LAYER RUSPERT SHIELD (防腐屏蔽与防止原电池双金属腐蚀)
+        </div>
+        
+        <div class="visual-suggestion">
+          <div class="visual-title">Visual Asset Suggestion (美工设计指引)</div>
+          <strong>Composition:</strong> Split-screen comparative composition combined with a 3D exploded micro-section graphic.<br>
+          <strong>Left Half (Rusted Competitor):</strong> Close-up of a standard, low-grade carbon steel roof screw showing massive red rust (Fe<sub>2</sub>O<sub>3</sub>) bleeding out onto a roofing sheet after exposure to a marine climate, with severe pitting and structural cracking around the screw joint.<br>
+          <strong>Right Half (FASTO A4 Premium):</strong> High-resolution detail of the FASTO A4 Bi-metal screw in the identical environment, remaining completely spotless and shiny with zero galvanic degradation.<br>
+          <strong>Center Exploded 3D Micro-Section:</strong> A microscopic cutout of the Ruspert coating structure:
+          <ol style="margin: 5px 0 0 15px; padding: 0;">
+            <li><em>Base Layer:</em> Sacrificial Zinc Electroplating.</li>
+            <li><em>Middle Layer:</em> Highly dense chemical conversion passivation film.</li>
+            <li><em>Outer Layer:</em> Ceramic-Organic Hybrid Baked Finish (thermosetting hybrid resin baked-on at high temperature).</li>
+          </ol>
+          <strong>Electrical Insulation Overlay:</strong> A neon green lightning bolt with an open-circuit diagram (R &rarr; &infin;) illustrating how the 1500h Ruspert coating blocks electrical conductivity (&Delta;V &asymp; 0.5V to 0.6V) between the austenitic A4 stainless body, carbon steel tip, and steel purlins, reducing galvanic corrosion current to near-zero.
+        </div>
+
+        <div class="copywriting-box">
+          <div class="copy-title">TRIPLE-BARRIER SHIELD VS GALVANIC &amp; ATMOSPHERIC CORROSION</div>
+          <div style="font-weight: bold; font-size:15px; color:#38BDF8; margin-bottom:15px;">AS 3566 Class 5 Certified | 1500 Hours Neutral Salt Spray Proof</div>
+          
+          <p style="color: #E2E8F0;">The induction-hardened SCM435 drill tip is highly crucial for drilling power but highly vulnerable to rusting. FASTO solves this by applying a multi-layer ceramic-organic Ruspert barrier over the entire fastener.</p>
+          
+          <ul style="margin-left: 0; padding-left: 15px; color: #E2E8F0; margin-bottom: 25px;">
+            <li style="color: #E2E8F0; margin-bottom:12px;">
+              <span style="font-weight:bold; color:#FFFFFF;">1. SACRIFICIAL METALLIC ZINC LAYER (底层电镀锌牺牲阳极保护):</span><br>
+              Acts as a sacrificial cathode. If the fastener suffers scratch damage during installation, the electroplated zinc layer corrodes preferentially, preventing the carbon steel core from forming structural red rust.
+            </li>
+            <li style="color: #E2E8F0; margin-bottom:12px;">
+              <span style="font-weight:bold; color:#FFFFFF;">2. CHEMICAL CONVERSION FILM (中间致密化学转化钝化膜):</span><br>
+              Seals micro-pores and halts oxidation on the zinc surface, preventing rapid moisture and oxygen infiltration.
+            </li>
+            <li style="color: #E2E8F0; margin-bottom:0;">
+              <span style="font-weight:bold; color:#FFFFFF;">3. CERAMIC ORGANIC-INORGANIC BAKED TOPCOAT (外层杂化陶瓷烘烤面漆):</span><br>
+              Formulated with ceramic-like inorganic particles dispersed in an organic hybrid thermosetting resin. Baked at high temperature to form an exceptionally tough physical barrier that resists UV radiation, acid rain (SO<sub>2</sub>), and aggressive chemical fumes.
+            </li>
+          </ul>
+
+          <div style="font-weight: bold; color:#FFFFFF; margin-top:20px; margin-bottom:10px; font-size:13.5px; text-transform:uppercase; border-top:1px solid #1E293B; padding-top:15px; letter-spacing:0.5px;">
+            MITIGATION OF GALVANIC (DISSIMILAR METAL) CORROSION
+          </div>
+          <p style="color: #E2E8F0;">In coastal roof construction, attaching stainless steel screws to structural carbon steel purlins normally induces galvanic corrosion due to a potential difference of &Delta;V &asymp; 0.5 V to 0.6 V.</p>
+          <p style="color: #E2E8F0; margin-bottom:0;">FASTO's highly resistant Ruspert coating acts as a physical electrical insulator, blocking direct conductive contact, keeping galvanic current near zero, and safeguarding both the roof cladding and the structural joint.</p>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-badge">Module 5</span> GLOBAL CASE STUDY (机场屋顶工程系统解决方案)
+        </div>
+        
+        <div class="visual-suggestion">
+          <div class="visual-title">Visual Asset Suggestion (美工设计指引)</div>
+          <strong>Composition:</strong> A sweeping high-end architectural photo background of a modern airport terminal roof under dynamic marine/acid-rain weather conditions.<br>
+          <strong>Detail Overlay (CAD Blueprint + 3D Render Hybrid):</strong> A highly precise cutaway diagram showing the metal roofing system joined by the FASTO A4 Bi-metal screw.<br>
+          <ul style="margin: 5px 0 0 15px; padding: 0;">
+            <li><em>Top Sheet:</em> Grade 316 Al-Zn coating sheet cladding.</li>
+            <li><em>Sealing Component:</em> A4 Stainless Steel-backed EPDM washer compressed to exactly 70% of its original height, forming a neat, watertight, slightly bulging rubber ring sealing the entry hole.</li>
+            <li><em>Base Substrate:</em> 12.0mm thick heavy-duty structural steel purlin perfectly cut, tapped, and locked by the hardened Tek 5 point.</li>
+          </ul>
+          <strong>Mechanical Vector Arrows:</strong>
+          <ul style="margin: 5px 0 0 15px; padding: 0;">
+            <li>An upward red load vector arrow pointing from the purlin base, labeled: <strong>Ultimate Pull-out Load: 11.9 kN</strong> (Anti-Wind Uplift capacity).</li>
+            <li>A downward green vector arrow from the hex head collar indicating the clamping force, labeled: <strong>Optimal Torque: 6.0 – 8.0 N·m</strong>.</li>
+          </ul>
+        </div>
+
+        <div style="margin: 20px 0;">
+          <p style="font-weight: bold; color: #1E293B; margin-bottom: 8px; font-size:13.5px; text-transform: uppercase;">
+            Washer Compression Sealing Criteria (EPDM 垫圈安装压缩标准)
+          </p>
+          <pre style="font-family: monospace; background-color: #0F172A; color: #F8FAFC; padding: 15px; border-radius: 6px; overflow-x: auto; line-height: 1.5; font-size: 13px; margin: 0;">
+                    [WASHER COMPRESSION SEALING CRITERIA]
+ 
+     [UNDER-TIGHTENED]           [CORRECT ASSEMBLY]          [OVER-TIGHTENED]
+     Leakage Risk (Too Loose)      100% Watertight Seal        EPDM Split (Over-strained)
+         _______                     _______                     _______
+        /       \                   /       \                   /       \
+       +=========+                 +=========+                 +=========+
+       |=========|                 |=========|                 |=========|
+       |  EPDM   |                 /  EPDM   \                //  EPDM   \\
+     --+---------+--             -+-----------+-             -+-------------+-
+     ===============             ===============             ===============</pre>
+        </div>
+
+        <div class="copywriting-box">
+          <div class="copy-title">ENGINEERING CASE STUDY: AIRPORT ROOFING SYSTEM</div>
+          <div style="font-weight: bold; font-size:15px; color:#38BDF8; margin-bottom:15px;">Dynamic Uplift Resistance, Acid Rain Adaptability, and Tight Seal</div>
+          
+          <ul style="margin-left: 0; padding-left: 15px; color: #E2E8F0; margin-bottom: 25px;">
+            <li style="color: #E2E8F0; margin-bottom:12px;">
+              <span style="font-weight:bold; color:#FFFFFF;">PROJECT BACKGROUND:</span> Airport terminal roofs feature large-span steel frame systems that are continuously subjected to extreme wind load uplift, high relative humidity, coastal salt spray, or industrial acid rain. Fastener corrosion or thread failure can compromise the structural integrity of the roof cladding.
+            </li>
+            <li style="color: #E2E8F0; margin-bottom:12px;">
+              <span style="font-weight:bold; color:#FFFFFF;">THE FASTO SYSTEM CONNECTION SOLUTION:</span> FASTO A4 Bi-Metal 5.5x40mm (Tek 5) screws are used for sheet-to-purlin structural connections. The Grade A4 (316) stainless steel body ensures the fasteners will not corrode over the structure's lifetime (50+ years), eliminating roof maintenance costs.
+            </li>
+            <li style="color: #E2E8F0; margin-bottom:12px;">
+              <span style="font-weight:bold; color:#FFFFFF;">HIGH-WIND LOAD RESISTANCE:</span> With an ultimate tensile strength of 13.8 kN and a pull-out resistance of 11.9 kN in 12mm steel purlins, FASTO screws provide an exceptional margin of safety against dynamic wind uplift.
+            </li>
+            <li style="color: #E2E8F0; margin-bottom:0;">
+              <span style="font-weight:bold; color:#FFFFFF;">PERFECT WATERPROOF SEAL:</span> The pre-assembled 16mm Stainless Steel-backed EPDM washer compresses by 70% under 7.0 N·m installation torque, establishing an airtight and watertight barrier that prevents roof leakage under high positive pressure.
+            </li>
+          </ul>
+
+          <div style="font-weight: bold; color:#FFFFFF; margin-top:20px; margin-bottom:10px; font-size:13.5px; text-transform:uppercase; border-top:1px solid #1E293B; padding-top:15px; letter-spacing:0.5px;">
+            AIRPORT TERMINAL METAL ROOFING SYSTEM DIAGRAM
+          </div>
+          <pre style="font-family: monospace; background-color: #1E293B; color: #F8FAFC; padding: 15px; border-radius: 6px; overflow-x: auto; line-height: 1.5; font-size: 13px; margin: 10px 0; border: 1px solid #334155;">
+========================================================================================
+     [Outer Sheet] ----->  +----------------------+  &lt;--- Grade 316 AL-ZN Coating
+                           |      EPDM SEAL       |  &lt;--- 16mm Water Barrier (60-80% Comp.)
+     [FASTO Screw] ----->  |  FS4 HEX FLANGE HEAD |  &lt;--- Grade A4 (316) Stainless Steel Body
+                           +----------------------+
+                                      || (Linear Friction Welded Interface)
+                                      v
+     [Structural]  ----->  ========================  &lt;--- 12.0mm Heavy Structural Steel Purlin
+                           |   Tek 5 Carbon Tip   |  &lt;--- SCM435 Ground Cutting Flutes
+                           +----------------------+
+========================================================================================</pre>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-badge">Module 6</span> TRUST MATRICES &amp; COMPLIANCE (权威证书与绿色环保CBAM碳关税豁免)
+        </div>
+        
+        <div class="visual-suggestion">
+          <div class="visual-title">Visual Asset Suggestion (美工设计指引)</div>
+          <strong>Composition:</strong> A group of official trust badges in 3D metallic textures arranged in a circle, floating around the FASTO A4 screw.<br>
+          <strong>Badges Included:</strong>
+          <ol style="margin: 5px 0 0 15px; padding: 0;">
+            <li><strong>CE Shield</strong> (EU Construction Products Regulation CPR Compliant).</li>
+            <li><strong>ETA Shield</strong> (European Technical Assessment Certified).</li>
+            <li><strong>CBAM Green Leaf Shield</strong> (EU Carbon Border Adjustment Mechanism Certified - "Carbon Tariff Exempt").</li>
+            <li><strong>SGS Stamp</strong> (Material chemical grade verification and 1500h Salt Spray Test Certified).</li>
+            <li><strong>ISO 9001 &amp; IATF 16949 Badges</strong> (Aerospace &amp; automotive-grade high-precision QC systems).</li>
+            <li><strong>AS 3566 Class 5 Certified Badge</strong> (Severe Marine salting compliance).</li>
+          </ol>
+          <strong>Lighting:</strong> Crisp, clean studio backlighting that makes each badge cast a reflective shimmer, reinforcing elite quality.
+        </div>
+
+        <div class="copywriting-box">
+          <div class="copy-title">INTERNATIONAL CERTIFICATIONS &amp; GREEN BUILDING STANDARDS</div>
+          <div style="font-weight: bold; font-size:15px; color:#38BDF8; margin-bottom:15px;">Streamline Import Clearance | Satisfy Structural Audits | Cross Carbon Barriers</div>
+          
+          <p style="color: #E2E8F0;">FASTO enforces aerospace-grade manufacturing standards. Our A4 Bi-metal self-drilling screws are fully certified to streamline your local import custom clearance and satisfy structural audits:</p>
+          
+          <ul style="margin-left: 0; padding-left: 15px; color: #E2E8F0; margin-bottom: 0;">
+            <li style="color: #E2E8F0; margin-bottom:15px;">
+              <span style="font-weight:bold; color:#FFFFFF;">ETA (EUROPEAN TECHNICAL ASSESSMENT):</span> Fully assessed and certified for load-bearing roofing structural assemblies in the EU, complying with European building regulations.
+            </li>
+            <li style="color: #E2E8F0; margin-bottom:15px;">
+              <span style="font-weight:bold; color:#FFFFFF;">CE (CONFORMITÉ EUROPÉENNE):</span> Fully compliant with the EU Construction Products Regulation (CPR).
+            </li>
+            <li style="color: #E2E8F0; margin-bottom:15px;">
+              <span style="font-weight:bold; color:#FFFFFF;">CBAM COMPLIANT (EU CARBON BORDER ADJUSTMENT MECHANISM):</span> Our production process includes complete carbon-footprint tracking. We supply certified CBAM reporting documents with every batch, helping European B2B importers clear customs without carbon tariff penalties.
+            </li>
+            <li style="color: #E2E8F0; margin-bottom:15px;">
+              <span style="font-weight:bold; color:#FFFFFF;">SGS VERIFIED:</span> Third-party material chemical composition verification and certified AS 3566 1500-Hour salt spray testing report (SGS-Ref: Corrosion-Free Proof).
+            </li>
+            <li style="color: #E2E8F0; margin-bottom:0;">
+              <span style="font-weight:bold; color:#FFFFFF;">ISO 9001:2015, ISO 14001:2015 &amp; IATF 16949:</span> Manufactured under rigorous environmental and automotive-grade quality management systems to guarantee eco-friendly production, zero defects, and tight dimensional tolerances.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-badge">Module 7</span> LOGISTICS, PACKAGING &amp; PARTNERSHIP (物流包装与B2B合作政策)
+        </div>
+        
+        <div class="visual-suggestion">
+          <div class="visual-title">Visual Asset Suggestion (美工设计指引)</div>
+          <strong>Composition:</strong> A premium, clean packaging presentation.<br>
+          <strong>Primary Subject:</strong> A heavy-duty, clean cardboard box made of textured dark-grey kraft paper, printed with the crisp white and green <strong>FASTO</strong> brand logo. The box lid is angled open.<br>
+          <strong>Content Display:</strong> Inside the box, 200 PCS of the 5.5x40mm bimetal screws are arranged neatly in rows, reflecting clean, silver-metallic highlights.<br>
+          <strong>Background Elements:</strong> To the side, 10-20 screws are artistically arranged, showcasing the hex head FS4 branding, EPDM washer, and the dark-grey Tek 5 point. In the lower background, a wooden pallet loaded with 36 strapped master cartons wrapped in clear protective film is shown, ready for container shipping.
+        </div>
+
+        <div class="copywriting-box">
+          <div class="copy-title">B2B PROCUREMENT POLICY, PACKAGING &amp; CUSTOMIZATION</div>
+          
+          <p style="color: #E2E8F0;">We understand the strict quality, logistics, and traceability requirements of global contractors, roofing importers, and purchasing departments.</p>
+          
+          <ul style="margin-left: 0; padding-left: 15px; color: #E2E8F0; margin-bottom: 0;">
+            <li style="color: #E2E8F0; margin-bottom:15px;">
+              <span style="font-weight:bold; color:#FFFFFF; text-transform:uppercase; letter-spacing:0.5px;">STANDARD PACKAGING SPECIFICATIONS:</span>
+              <ul style="margin: 5px 0 0 15px; padding: 0; list-style-type: circle;">
+                <li style="color: #E2E8F0;"><strong>Unit Box:</strong> 200 PCS / Box. Packed in a high-grade, rigid, and moisture-resistant cardboard box with FASTO branding.</li>
+                <li style="color: #E2E8F0;"><strong>Outer Master Carton:</strong> 10 Boxes / Master Carton (Total 2,000 PCS per master carton). Strapped, shrink-wrapped, and wooden palletized (36 Cartons per Pallet) to prevent deformation during ocean freight and forklift handling.</li>
+              </ul>
+            </li>
+            <li style="color: #E2E8F0; margin-bottom:0;">
+              <span style="font-weight:bold; color:#FFFFFF; text-transform:uppercase; letter-spacing:0.5px;">BUSINESS COOPERATION &amp; SALES POLICY:</span>
+              <ul style="margin: 5px 0 0 15px; padding: 0; list-style-type: circle;">
+                <li style="color: #E2E8F0;"><strong>Minimum Order Quantity (MOQ):</strong> 5,000 PCS (Custom orders or large-scale contract bids are prioritized).</li>
+                <li style="color: #E2E8F0;"><strong>Free Trial Sample Pack:</strong> Free Sample Packs (10–20 PCS) are available upon request for quality testing. Delivery cost is borne by the buyer (fully refunded on the first commercial order).</li>
+                <li style="color: #E2E8F0; margin-bottom:0;"><strong>Customization (OEM) Services:</strong>
+                  <ul style="margin: 5px 0 0 15px; padding: 0; list-style-type: square;">
+                    <li style="color: #E2E8F0;"><em>Custom Head Stamp:</em> Custom embossed brand logos on the hex washer head for orders exceeding 50,000 PCS.</li>
+                    <li style="color: #E2E8F0;"><em>Private Labeling:</em> Tailored box sizes, private labeling, and regional-specific safety/compliance language printing on the box.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- PART 4 -->
+      <h2 class="section-title">Part 4: COMPLIANCE WARNINGS &amp; OPERATIONS SUMMARY (运营施工规范要点与强制免责声明)</h2>
+      
+      <h3 class="sub-section-title">4.1 Professional Installation Quick Guidelines</h3>
+      <p>To guarantee the structural integrity of the joint and maximize the corrosion barrier, installers must adhere strictly to the following parameters:</p>
+      <ol>
+        <li style="margin-bottom:12px;">
+          <strong>Tool Specification:</strong> Use a specialized high-torque screw gun (not an impact wrench or hammer drill) equipped with a depth-sensitive clutch and a 5/16” magnetic hex socket.
+        </li>
+        <li style="margin-bottom:12px;">
+          <strong>Speed Regulation:</strong> Keep the rotation speed between <strong>1500 RPM and 2500 RPM</strong> (typical 2000 RPM). Excessive speed (&gt; 3000 RPM) will burn the carbon steel drill point due to frictional heat, while insufficient speed (&lt; 1000 RPM) will fail to supply enough axial pressure to cut the 12 mm steel efficiently.
+        </li>
+        <li style="margin-bottom:12px;">
+          <strong>Washer Compression Control:</strong> Tighten until the EPDM rubber layer is compressed to approximately <strong>60–80%</strong> of its original uncompressed thickness. The EPDM should form a slight, visible bulge around the perimeter of the stainless backing plate, creating an airtight, watertight seal. Avoid over-tightening (which causes the EPDM to extrude outwards, splitting the rubber and losing UV protection) and under-tightening (which fails to seal water).
+        </li>
+      </ol>
+
+      <!-- EXPLICIT WARNING AND DISCLAIMERS -->
+      <div class="warning-card">
+        <div class="warning-title">IMPORTANT ENGINEERING DISCLAIMER</div>
+        <p class="warning-content" style="margin-bottom: 15px;">
+          All technical and benchmark data presented in this document are measured under controlled laboratory conditions in accordance with AS 3566 and EN ISO standards. On-site performance may vary depending on local steel alloy grade, installation speed, clutch tool accuracy, and contractor skills. Always consult a licensed structural engineer for final joint load-bearing calculations.
+        </p>
+        <div class="warning-title" style="color: #9A3412;">AI DISCLAIMER / AI免责声明</div>
+        <p class="warning-content" style="font-weight: bold; color: #9A3412; background-color: rgba(251, 191, 36, 0.25); padding: 12px; border-radius: 4px; margin: 0;">
+          ⚠️ AI 编审提示：AI 是辅助工具，不是绝对权威。关键性的工程建筑计算、安装载荷评估及商业采购决策，在实际落地前必须由专业技术团队进行人工复核与现场实际拉拔测试评估。
+        </p>
+      </div>
+
+    </div> <!-- END CONTENT WRAPPER -->
+
+    <!-- FOOTER PANEL -->
+    <div class="footer">
+      <p>Document Compiled by FASTO Global Operations &amp; Technical Support Team</p>
+      <p>Copyright © 2026 FASTO INDUSTRIAL CO., LTD. All Rights Reserved.</p>
+    </div>
+
+  </div> <!-- END CONTAINER -->
+
+</body>
+</html>
